@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de Bord Analytique</title>
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <h1>Tableau de Bord Analytique</h1>
+        <div class="indicators-section">
+            <h2>Indicateurs Financiers Clés</h2>
+            <div id="financial-indicators">
+                <ul>
+                    <li>Chiffre d'affaires: <span id="revenue"></span></li>
+                    <li>Bénéfice Net: <span id="net-profit"></span></li>
+                    <li>Ratio de Liquidité: <span id="liquidity-ratio"></span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="charts-section">
+            <h2>Graphiques Interactifs</h2>
+            <canvas id="revenueChart"></canvas>
+        </div>
+    </div>
+    <script src="{% static 'js/dashboard.js' %}"></script>
+</body>
+</html>
