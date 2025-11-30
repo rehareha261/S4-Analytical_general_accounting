@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Exportation de Rapports</title>
+</head>
+<body>
+    <h1>Exportation de Rapports</h1>
+    <form action="{% url 'export_report' %}" method="post">
+        {% csrf_token %}
+        <button type="submit" name="format" value="pdf">Exporter en PDF</button>
+        <button type="submit" name="format" value="excel">Exporter en Excel</button>
+    </form>
+</body>
+</html>
